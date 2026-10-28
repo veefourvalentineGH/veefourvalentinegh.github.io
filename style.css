@@ -19,3 +19,4 @@ p{margin:0 0 1.4rem}
 footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em;padding:2rem 1rem 3rem}
 .gallery img.flip{transform:scaleX(-1)}
 @media(min-width:700px){.gallery img.col3{grid-column:3}}
+.mail{font-size:1.2rem;font-style:normal}.mail a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}.mail a:hover{color:var(--ink);border-color:var(--ink)}

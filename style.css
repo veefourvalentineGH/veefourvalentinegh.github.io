@@ -30,3 +30,7 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em
 .shows .info strong{display:block;font-weight:400;font-size:1.1rem}
 .shows .info span{color:var(--muted);font-size:.9rem}
 .tag.soft{font-size:.78rem;opacity:.7;letter-spacing:.04em}
+.month{font-size:1.55rem;letter-spacing:.2em}
+.shows .date{flex-basis:5rem}
+.shows .dow{font-size:.85rem}
+.shows .day{font-size:2.6rem}

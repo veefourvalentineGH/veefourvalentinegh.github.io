@@ -163,3 +163,10 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+
+/* Sample show listings */
+.sample-shows{max-width:46rem;margin:clamp(2rem,5vw,3.5rem) auto 0}
+.sample-shows .eyebrow{text-align:center;margin-bottom:.3rem}
+.sample-note{text-align:center;margin:0 0 1.2rem;font-size:.85rem;color:var(--muted);opacity:.8}
+.shows .mon{display:block;font:500 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.shows .day{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}

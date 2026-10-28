@@ -34,3 +34,4 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em
 .shows .date{flex-basis:5rem}
 .shows .dow{font-size:.85rem}
 .shows .day{font-size:2.6rem}
+.tag.soft{max-width:34rem;margin-left:auto;margin-right:auto;line-height:1.6}

@@ -24,7 +24,7 @@ p{margin:0 0 1.4rem}
 .soon p{color:var(--muted);font-style:italic}
 footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em;padding:2rem 1rem 3rem}
 .gallery img.flip{transform:scaleX(-1)}
-@media(min-width:700px){.gallery img.col3{grid-column:3}}
+@media(min-width:700px){.gallery .col3{grid-column:3}}
 .mail{font-size:1.2rem;font-style:normal}.mail a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}.mail a:hover{color:var(--ink);border-color:var(--ink)}
 .month{margin:2.5rem 0 1rem}
 .shows{list-style:none;margin:0;padding:0}
@@ -58,3 +58,22 @@ h2{font-size:1.3rem}
 .shows .info span{font-weight:300}
 .mail{font-family:var(--sans)}
 footer{font-family:var(--sans);font-weight:300}
+
+/* Click-to-enlarge photos (CSS only, no scripts) */
+.thumb{display:block;overflow:hidden}
+.thumb img{transition:transform .35s ease,filter .35s ease}
+.thumb:hover img,.thumb:focus-visible img{transform:scale(1.05);filter:brightness(1.08)}
+.thumb:hover img.flip,.thumb:focus-visible img.flip{transform:scaleX(-1) scale(1.05)}
+.thumb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lightbox{display:none;position:fixed;inset:0;z-index:50;align-items:center;justify-content:center;padding:1.5rem;background:rgba(16,3,9,.92)}
+.lightbox:target{display:flex}
+.lb-bg{position:absolute;inset:0;cursor:zoom-out}
+.lightbox>img{position:relative;max-width:min(92vw,980px);max-height:88vh;width:auto;height:auto;object-fit:contain;border:1px solid var(--line);box-shadow:0 24px 90px rgba(0,0,0,.65);animation:pop .3s ease}
+.lightbox>img.flip{transform:scaleX(-1)}
+.lb-close,.lb-nav{position:absolute;z-index:2;color:var(--gold);text-decoration:none;line-height:1;font-family:var(--serif);opacity:.85}
+.lb-close:hover,.lb-nav:hover{opacity:1;color:var(--ink)}
+.lb-close{top:.8rem;right:1.3rem;font-size:3rem}
+.lb-nav{top:50%;transform:translateY(-50%);font-size:4rem;padding:.5rem 1rem}
+.lb-prev{left:.4rem}.lb-next{right:.4rem}
+@keyframes pop{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+@media(prefers-reduced-motion:reduce){.lightbox>img{animation:none}.thumb img{transition:none}}

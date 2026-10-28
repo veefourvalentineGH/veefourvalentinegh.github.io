@@ -4,7 +4,7 @@ html{background:var(--bg)}
 body{margin:0;color:var(--ink);font:18px/1.75 Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at top,var(--bg-lift) 0,var(--bg) 55%,var(--bg-deep) 100%) no-repeat fixed var(--bg);min-height:100vh}
 header{text-align:center;padding:2.2rem 1rem 1rem}
 .logo{display:block}
-.logo img{display:block;width:min(560px,88vw);height:auto;margin:0 auto}
+.logo img{display:block;width:min(720px,92vw);height:auto;margin:0 auto}
 nav{margin-top:1.2rem;display:flex;gap:1.6rem;justify-content:center;flex-wrap:wrap}
 nav a{color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;padding:.4rem 0;border-bottom:1px solid transparent}
 nav a:hover,nav a[aria-current]{color:var(--gold);border-color:var(--gold)}

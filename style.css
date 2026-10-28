@@ -1,3 +1,8 @@
+@font-face{font-family:"Jost";font-weight:300;font-style:normal;font-display:swap;src:url(fonts/jost-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/jost-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/jost-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/cormorant-garamond-latin-400-italic.woff2) format("woff2")}
 :root{--bg:#4a1228;--bg-deep:#2a0a17;--bg-lift:#651b38;--ink:#f6ebe9;--muted:#cdb0b6;--gold:#e8bd7e;--line:#7d3250}
 *{box-sizing:border-box}
 html{background:var(--bg)}
@@ -35,3 +40,21 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em
 .shows .dow{font-size:.85rem}
 .shows .day{font-size:2.6rem}
 .tag.soft{max-width:34rem;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* Typography: Jost (body/menu) + Cormorant Garamond (headings), self-hosted */
+:root{--sans:"Jost","Avenir Next","Helvetica Neue",Arial,sans-serif;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.85;letter-spacing:.01em}
+nav a{font-family:var(--sans);font-weight:400;font-size:.78rem;letter-spacing:.24em}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:.2em}
+h1{font-size:2.1rem}
+h2{font-size:1.3rem}
+.month{font-size:1.8rem}
+.tag{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.4rem}
+.tag.soft{font-family:var(--sans);font-style:normal;font-weight:300;font-size:.82rem;letter-spacing:.03em}
+.soon p{font-family:var(--serif);font-size:1.35rem}
+.shows .day{font-family:var(--serif);font-weight:500;font-size:3rem}
+.shows .dow{font-family:var(--sans);font-weight:400}
+.shows .info strong{font-weight:500;font-size:1.05rem;letter-spacing:.02em}
+.shows .info span{font-weight:300}
+.mail{font-family:var(--sans)}
+footer{font-family:var(--sans);font-weight:300}

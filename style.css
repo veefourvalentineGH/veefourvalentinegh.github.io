@@ -170,3 +170,4 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .sample-note{text-align:center;margin:0 0 1.2rem;font-size:.85rem;color:var(--muted);opacity:.8}
 .shows .mon{display:block;font:500 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .shows .day{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+.soft-note{max-width:34rem;margin:0 auto 1.6rem;text-align:center;font:300 .82rem/1.6 var(--sans);letter-spacing:.03em;color:var(--muted);opacity:.62}

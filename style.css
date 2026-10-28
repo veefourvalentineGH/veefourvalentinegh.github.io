@@ -21,3 +21,11 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.15em
 .gallery img.flip{transform:scaleX(-1)}
 @media(min-width:700px){.gallery img.col3{grid-column:3}}
 .mail{font-size:1.2rem;font-style:normal}.mail a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}.mail a:hover{color:var(--ink);border-color:var(--ink)}
+.month{margin:2.5rem 0 1rem}
+.shows{list-style:none;margin:0;padding:0}
+.shows li{display:flex;gap:1.2rem;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.shows .date{flex:0 0 4rem;text-align:center;line-height:1.1}
+.shows .dow{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.shows .day{display:block;font-size:1.9rem;color:var(--gold)}
+.shows .info strong{display:block;font-weight:400;font-size:1.1rem}
+.shows .info span{color:var(--muted);font-size:.9rem}

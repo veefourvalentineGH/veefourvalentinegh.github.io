@@ -1,7 +1,7 @@
 :root{--bg:#4a1228;--bg-deep:#2a0a17;--bg-lift:#651b38;--ink:#f6ebe9;--muted:#cdb0b6;--gold:#e8bd7e;--line:#7d3250}
 *{box-sizing:border-box}
 html{background:var(--bg)}
-body{margin:0;color:var(--ink);font:18px/1.75 Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at top,var(--bg-lift) 0,var(--bg) 55%,var(--bg-deep) 100%) no-repeat fixed var(--bg);min-height:100vh}
+body{margin:0;color:var(--ink);font:18px/1.75 Georgia,"Times New Roman",serif;background:linear-gradient(90deg,rgba(18,4,10,.78) 0,rgba(18,4,10,.35) 14%,rgba(18,4,10,0) 32%,rgba(18,4,10,0) 68%,rgba(18,4,10,.35) 86%,rgba(18,4,10,.78) 100%),radial-gradient(ellipse at top,var(--bg-lift) 0,var(--bg) 55%,var(--bg-deep) 100%) no-repeat fixed var(--bg);min-height:100vh}
 header{text-align:center;padding:2.2rem 1rem 1rem}
 .logo{display:block}
 .logo img{display:block;width:min(720px,92vw);height:auto;margin:0 auto}

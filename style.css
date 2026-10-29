@@ -248,5 +248,5 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 
 /* Wide feature photo in the gallery */
 .thumb-wide{grid-column:1/-1}
-.thumb-wide img{aspect-ratio:16/9;object-position:50% 50%}
-@media (min-width:900px){.thumb-wide img{aspect-ratio:2.2/1;object-position:50% 62%}}
+.thumb-wide img{aspect-ratio:16/9;object-position:50% 45%}
+@media (min-width:900px){.thumb-wide img{aspect-ratio:2.2/1;object-position:50% 50%}}

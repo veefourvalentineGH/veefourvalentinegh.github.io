@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Vee Valentine wordmark beside a portrait of the artist at a vintage microphone">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=29">
+<link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,21 +34,26 @@
 <section class="section deep" aria-labelledby="listen-h">
 <div class="wrap"><div class="statement">
 <p class="eyebrow">Now spinning</p>
-<h2 id="listen-h">Hear a sample.</h2>
-<p class="lead">A short sample clip. Press play and drop the needle.</p>
-<div class="player" data-player data-title="T-Shirt And Jeans (sample)">
+<h2 id="listen-h">Hear the samples.</h2>
+<p class="lead">Two short sample clips. Pick a side, press play, and drop the needle.</p>
+<div class="player" data-player data-title="Otherwise">
 <div class="deck" aria-hidden="true">
-<div class="platter"><div class="vinyl"><div class="label"><div><span>Vee Valentine</span><b>T-Shirt<br>And Jeans</b></div></div></div></div>
+<div class="platter"><div class="vinyl"><div class="label"><div><span>Vee Valentine</span><b class="label-title">Otherwise</b></div></div></div></div>
 <div class="rest"></div>
 <div class="arm"><i></i></div>
 <div class="led"></div><div class="knob"></div>
 </div>
 <div class="controls">
-<button class="play" type="button" aria-label="Play T-Shirt And Jeans (sample)"><span class="icon-play"></span><span class="icon-pause"></span></button>
-<div class="meta"><strong>T-Shirt And Jeans</strong><span>Sample clip</span></div>
-<div class="scrub"><input class="scrub-range" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek within T-Shirt And Jeans (sample)"><span class="time" aria-hidden="true">0:00 / 0:00</span></div>
+<button class="play" type="button" aria-label="Play Otherwise"><span class="icon-play"></span><span class="icon-pause"></span></button>
+<div class="meta"><strong class="track-title">Otherwise</strong><span class="track-credit">Sample clip &middot; Written and produced by Scott Davis</span></div>
+<div class="scrub"><input class="scrub-range" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek within Otherwise"><span class="time" aria-hidden="true">0:00 / 0:00</span></div>
+<ul class="tracklist" aria-label="Choose a track">
+<li><button type="button" data-src="audio/otherwise-sample.mp3" data-title="Otherwise" data-credit="Sample clip &middot; Written and produced by Scott Davis" aria-current="true"><span>Side A</span>Otherwise</button></li>
+<li><button type="button" data-src="audio/t-shirt-and-jeans-sample.mp3" data-title="T-Shirt And Jeans" data-credit="Sample clip" aria-current="false"><span>Side B</span>T-Shirt And Jeans</button></li>
+</ul>
 </div>
-<audio controls preload="metadata" src="audio/t-shirt-and-jeans-sample.mp3">Your browser does not support audio playback.</audio>
+<audio controls preload="metadata" src="audio/otherwise-sample.mp3">Your browser does not support audio playback.</audio>
+<noscript><p class="fineprint">Also: <a href="audio/t-shirt-and-jeans-sample.mp3">T-Shirt And Jeans (sample)</a></p></noscript>
 </div>
 </div></div>
 </section>
@@ -98,6 +103,6 @@ Spotify embeds also require adding "frame-src https://open.spotify.com" to this 
 <p class="copyright">&copy; 2026 Vee Valentine. All rights reserved.</p>
 </div>
 </footer>
-<script src="player.js?v=2" defer></script>
+<script src="player.js?v=3" defer></script>
 </body>
 </html>

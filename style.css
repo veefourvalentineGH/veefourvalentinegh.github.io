@@ -234,3 +234,14 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .scrub-range::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ivory);border:2px solid var(--gold)}
 .player-wrap{margin-top:2.2rem}
 @media (prefers-reduced-motion:reduce){.player .vinyl{animation:none}.player .arm{transition:none}}
+
+/* Track list ("sides") */
+.player .label b{text-wrap:balance;overflow-wrap:anywhere}
+.player .tracklist{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:.4rem 0 0;padding:0}
+.player .tracklist button{display:flex;align-items:baseline;gap:.6rem;padding:.7rem 1rem;min-height:44px;background:transparent;color:var(--ivory);border:1px solid rgba(245,233,231,.4);font:400 .95rem/1.2 var(--sans);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.player .tracklist button span{font:500 .68rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.player .tracklist button:hover{border-color:var(--gold)}
+.player .tracklist button[aria-current="true"]{background:var(--gold);border-color:var(--gold);color:var(--night)}
+.player .tracklist button[aria-current="true"] span{color:var(--night)}
+.player:not(.is-ready) .tracklist{display:none}
+.player noscript p{text-align:center}

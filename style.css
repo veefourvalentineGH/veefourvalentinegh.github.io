@@ -245,8 +245,3 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .player .tracklist button[aria-current="true"] span{color:var(--night)}
 .player:not(.is-ready) .tracklist{display:none}
 .player noscript p{text-align:center}
-
-/* Wide feature photo in the gallery */
-.thumb-wide{grid-column:1/-1}
-.thumb-wide img{aspect-ratio:16/9;object-position:50% 42%}
-@media (min-width:900px){.thumb-wide img{aspect-ratio:2.2/1;object-position:50% 38%}}

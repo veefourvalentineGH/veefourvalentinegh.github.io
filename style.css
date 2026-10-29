@@ -250,3 +250,7 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .thumb-wide{grid-column:1/-1}
 .thumb-wide img{aspect-ratio:16/9;object-position:50% 60%}
 @media (min-width:900px){.thumb-wide img{aspect-ratio:2.2/1;object-position:50% 50%}}
+
+/* Keep the label text clear of the center spindle */
+.player .label>div{display:flex;flex-direction:column;justify-content:space-between;align-items:center;height:72%;width:74%}
+.player .label b{margin-top:0}

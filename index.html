@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; media-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Vee Valentine | Smoky, jazz-inflected pop from Chicago</title>
 <meta name="description" content="Vee Valentine is a Chicago vocalist whose smoky, jazz-inflected pop feels like velvet, low light, and a secret shared after midnight.">
@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Vee Valentine wordmark beside a portrait of the artist at a vintage microphone">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=27">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Vee Valentine","url":"https://veevalentine.com/","description":"Chicago vocalist blending classic jazz and lounge influences with modern pop.","genre":["Pop","Jazz","Lounge"],"image":"https://veevalentine.com/images/og-vee-valentine.jpg"}</script>
 </head>
 <body>
@@ -50,6 +50,23 @@
 <hr class="rule">
 <p class="lead">Vee is writing and recording a first collection of original songs with Nashville songwriter and producer Scotty Davis. First releases are planned for late 2026 and early 2027.</p>
 <p><a class="textlink" href="music.html">More about the music</a></p>
+<div class="player-wrap">
+<p class="eyebrow">Hear a sample</p>
+<div class="player" data-player data-title="T-Shirt And Jeans (sample)">
+<div class="deck" aria-hidden="true">
+<div class="platter"><div class="vinyl"><div class="label"><div><span>Vee Valentine</span><b>T-Shirt<br>And Jeans</b></div></div></div></div>
+<div class="rest"></div>
+<div class="arm"><i></i></div>
+<div class="led"></div><div class="knob"></div>
+</div>
+<div class="controls">
+<button class="play" type="button" aria-label="Play T-Shirt And Jeans (sample)"><span class="icon-play"></span><span class="icon-pause"></span></button>
+<div class="meta"><strong>T-Shirt And Jeans</strong><span>Sample clip</span></div>
+<div class="scrub"><input class="scrub-range" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek within T-Shirt And Jeans (sample)"><span class="time" aria-hidden="true">0:00 / 0:00</span></div>
+</div>
+<audio controls preload="metadata" src="audio/t-shirt-and-jeans-sample.mp3">Your browser does not support audio playback.</audio>
+</div>
+</div>
 <!-- FEATURED RELEASE (future): replace this section with the .release layout from music.html
      (artwork, title, confirmed date, Spotify embed, listen link) once a verified release exists. -->
 </div></div>
@@ -110,5 +127,6 @@
 </div>
 </footer>
 <script src="site.js" defer></script>
+<script src="player.js" defer></script>
 </body>
 </html>

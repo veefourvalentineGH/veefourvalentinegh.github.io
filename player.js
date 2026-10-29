@@ -43,6 +43,8 @@
       root.style.setProperty("--arm", (root.classList.contains("is-engaging") ? 30 + 12 * p : 4) + "deg");
     }
 
+    function setLong() { root.classList.toggle("is-long", title.length > 16); }
+
     function setEngaged(on) {
       root.classList.toggle("is-engaging", on);
       btn.setAttribute("aria-label", (on ? "Pause " : "Play ") + title);
@@ -78,6 +80,7 @@
       if (creditEl) creditEl.textContent = button.getAttribute("data-credit") || "";
       if (labelEl) labelEl.textContent = title;
       root.setAttribute("data-title", title);
+      setLong();
       tracks.forEach(function (b) { b.setAttribute("aria-current", b === button ? "true" : "false"); });
       audio.src = button.getAttribute("data-src");
       audio.load();
@@ -105,6 +108,7 @@
     audio.addEventListener("timeupdate", render);
     audio.addEventListener("loadedmetadata", render);
     audio.addEventListener("durationchange", render);
+    setLong();
     setEngaged(false);
   });
 })();

@@ -254,3 +254,7 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 /* Keep the label text clear of the center spindle */
 .player .label>div{display:flex;flex-direction:column;justify-content:space-between;align-items:center;height:72%;width:74%}
 .player .label b{margin-top:0}
+
+/* Long track titles: smaller label type so it stays inside the label */
+.player.is-long .label b{font-size:clamp(.4rem,1.45vw,.74rem);line-height:1.08}
+.player .tracklist button span{min-width:1.4em}

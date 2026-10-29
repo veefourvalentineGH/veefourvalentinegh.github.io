@@ -198,7 +198,7 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .player .label b{display:block;font:500 clamp(.7rem,2.3vw,1.05rem)/1.05 var(--serif);margin-top:.15rem}
 .player .label::after{content:"";position:absolute;width:7%;aspect-ratio:1;border-radius:50%;background:#1b1b1d}
 .player .arm{position:absolute;right:5.5%;top:6%;width:7%;aspect-ratio:1/8;transform-origin:50% 9%;
-  transform:rotate(var(--arm,4deg));transition:transform .9s cubic-bezier(.4,.1,.2,1)}
+  transform:rotate(var(--arm,4deg));transition:transform 1s cubic-bezier(.4,.1,.2,1)}
 .player .arm::before{content:"";position:absolute;left:50%;top:0;width:100%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
   background:radial-gradient(circle at 35% 30%,#d9d9dc,#7b7b80 60%,#3b3b3f);box-shadow:0 2px 6px rgba(0,0,0,.5)}
 .player .arm::after{content:"";position:absolute;left:50%;top:9%;width:24%;height:80%;transform:translateX(-50%);
@@ -207,7 +207,7 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
   background:linear-gradient(180deg,#d9b36b,#a07a35);border-radius:3px 3px 5px 5px;box-shadow:0 3px 6px rgba(0,0,0,.5)}
 .player .rest{position:absolute;right:3.4%;top:63%;width:3.6%;aspect-ratio:1/2.2;border-radius:6px;background:linear-gradient(90deg,#5b5b60,#2c2c30);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
 .player .led{position:absolute;left:7%;bottom:5%;width:2.2%;aspect-ratio:1;border-radius:50%;background:#4a1a1a;box-shadow:0 0 0 2px rgba(255,255,255,.1)}
-.player.is-playing .led{background:#ff7a59;box-shadow:0 0 10px 2px rgba(255,122,89,.75),0 0 0 2px rgba(255,255,255,.12)}
+.player.is-engaging .led{background:#ff7a59;box-shadow:0 0 10px 2px rgba(255,122,89,.75),0 0 0 2px rgba(255,255,255,.12)}
 .player .knob{position:absolute;right:6%;bottom:6%;width:9%;aspect-ratio:1;border-radius:50%;
   background:radial-gradient(circle at 35% 30%,#e8c98a,#9c7633);box-shadow:0 3px 8px rgba(0,0,0,.5)}
 .player .knob::after{content:"";position:absolute;left:50%;top:10%;width:6%;height:34%;background:#3b1022;border-radius:2px;transform:translateX(-50%)}
@@ -219,8 +219,8 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 .player .play:hover{background:var(--ivory);border-color:var(--ivory)}
 .player .play .icon-play{width:0;height:0;border-left:.95rem solid currentColor;border-top:.6rem solid transparent;border-bottom:.6rem solid transparent;margin-left:.2rem}
 .player .play .icon-pause{display:none;width:1rem;height:1.1rem;border-left:.32rem solid currentColor;border-right:.32rem solid currentColor}
-.player.is-playing .play .icon-play{display:none}
-.player.is-playing .play .icon-pause{display:block}
+.player.is-engaging .play .icon-play{display:none}
+.player.is-engaging .play .icon-pause{display:block}
 .player .meta{flex:1 1 9rem;min-width:0;text-align:left}
 .player .meta strong{display:block;font:500 1.3rem/1.15 var(--serif)}
 .player .meta span{font-size:.85rem;color:var(--muted)}

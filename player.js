@@ -1,9 +1,13 @@
 /* Vintage record-player audio widget.
+   Press play: the needle lowers onto the record (~1s), then the audio and the spinning start together.
    Progressive enhancement: without JavaScript the page shows the browser's own audio controls.
    No autoplay; only one player plays at a time. */
 (function () {
   var players = [].slice.call(document.querySelectorAll("[data-player]"));
   if (!players.length) return;
+
+  var NEEDLE_MS = 1000; // keep in sync with the .arm transition in style.css
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function fmt(s) {
     if (!isFinite(s) || s < 0) s = 0;
@@ -17,6 +21,7 @@
     var range = root.querySelector(".scrub-range");
     var time = root.querySelector(".time");
     var title = root.getAttribute("data-title") || "track";
+    var timer = null;
     if (!audio || !btn || !range || !time) return;
 
     audio.removeAttribute("controls");
@@ -31,38 +36,50 @@
       range.style.setProperty("--pct", (p * 100).toFixed(1) + "%");
       range.setAttribute("aria-valuetext", fmt(t) + " of " + fmt(d));
       time.textContent = fmt(t) + " / " + fmt(d);
-      root.style.setProperty("--arm", (root.classList.contains("is-playing") ? 30 + 12 * p : 4) + "deg");
+      root.style.setProperty("--arm", (root.classList.contains("is-engaging") ? 30 + 12 * p : 4) + "deg");
     }
 
-    function setPlaying(on) {
-      root.classList.toggle("is-playing", on);
+    function setEngaged(on) {
+      root.classList.toggle("is-engaging", on);
       btn.setAttribute("aria-label", (on ? "Pause " : "Play ") + title);
       render();
     }
 
-    btn.addEventListener("click", function () {
-      if (audio.paused) {
-        players.forEach(function (other) {
-          var a = other.querySelector("audio");
-          if (a && a !== audio) a.pause();
-        });
+    // Stop everything: cancel a pending start, pause, lift the needle, stop the spin.
+    function stop() {
+      if (timer) { clearTimeout(timer); timer = null; }
+      audio.pause();
+      root.classList.remove("is-playing");
+      setEngaged(false);
+    }
+    root._stop = stop;
+
+    function start() {
+      players.forEach(function (other) { if (other !== root && other._stop) other._stop(); });
+      audio.preload = "auto"; // buffer while the needle is moving
+      setEngaged(true);       // needle lowers onto the record
+      timer = setTimeout(function () {
+        timer = null;
         var p = audio.play();
-        if (p && p.catch) p.catch(function () { setPlaying(false); });
-      } else {
-        audio.pause();
-      }
+        if (p && p.catch) p.catch(stop);
+      }, reduceMotion ? 0 : NEEDLE_MS);
+    }
+
+    btn.addEventListener("click", function () {
+      if (root.classList.contains("is-engaging")) stop(); else start();
     });
     range.addEventListener("input", function () {
       var d = duration();
       if (d) audio.currentTime = (range.value / 1000) * d;
       render();
     });
-    audio.addEventListener("play", function () { setPlaying(true); });
-    audio.addEventListener("pause", function () { setPlaying(false); });
-    audio.addEventListener("ended", function () { audio.currentTime = 0; setPlaying(false); });
+    // The record starts spinning exactly when sound actually starts.
+    audio.addEventListener("playing", function () { root.classList.add("is-playing"); });
+    audio.addEventListener("pause", function () { root.classList.remove("is-playing"); });
+    audio.addEventListener("ended", function () { audio.currentTime = 0; stop(); });
     audio.addEventListener("timeupdate", render);
     audio.addEventListener("loadedmetadata", render);
     audio.addEventListener("durationchange", render);
-    setPlaying(false);
+    setEngaged(false);
   });
 })();

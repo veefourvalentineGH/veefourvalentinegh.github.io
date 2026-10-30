@@ -10,7 +10,7 @@ Every page carries its own title, description, canonical URL, and Open Graph tag
 ## Assets
 - `images/logo-d.webp` is the original wordmark (transparent). Never redraw or recolor it.
 - `images/vee-*.jpg` are the original photos. `images/web/` holds the optimized WebP versions the pages use
-  (`*-640.webp` for small screens, `*-full.webp` for large/lightbox). `piano-*` is a mirrored copy of `vee-2.jpg`.
+  (`*-640.webp` for small screens, `*-full.webp` for large/lightbox).
 - `images/og-vee-valentine.jpg` is the 1200x630 social-share image.
 - Fonts are self-hosted in `fonts/` (Jost and Cormorant Garamond, SIL Open Font License).
 

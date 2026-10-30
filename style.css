@@ -255,3 +255,6 @@ dialog.lb::backdrop{background:rgba(20,6,12,.94)}
 /* Long track titles: smaller label type so it stays inside the label */
 .player.is-long .label b{font-size:clamp(.4rem,1.45vw,.74rem);line-height:1.08}
 .player .tracklist button span{min-width:1.4em}
+
+/* About page photo: landscape source cropped to the portrait frame, keeping Vee and the guitar */
+.split img.crop-guitar{object-position:38% 50%}
